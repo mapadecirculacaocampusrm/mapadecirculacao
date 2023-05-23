@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(95deg, black, blue);
+}
+
+.container {
+    padding: 25px 10%;
+    text-align: center;
+}
+
+.container .heading {
+    font-size: 30px;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+.container #search-box {
+    width: 600px;
+    border: 3px solid blue;
+    padding: 12px 15px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 30px;
+    background-image: linear-gradient(95deg, grey,white);
+}
+
+.container .image-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.7) translateY(-10px);
+        opacity: 0;
+    }
+}
+.container .image-container .image {
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid blue;
+    width: 350px;
+    border-radius: 5px;
+    animation: fadeIn 0.2s linear;
+    cursor: pointer;
+}
+
+.container .image-container .image img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.container .image-container .image img:hover {
+  transform: scale(1.2);
+   
+}
+
+.container .image-container .image h3 {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+
+    .container .image-container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 25px 20px;
+    }
+
+    .container .image-container .image {
+        width: 100%;
+    }
+
+    .container #search-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .container .image-container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 25px 20px;
+    }
+    .container .image-container .image {
+        width: 100%;
+    }
+}
+.container .image-container .image:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container .image-container .image:hover img {
+    border-radius: 10px;
+  }
+  
+  /* Restante do código CSS... */
